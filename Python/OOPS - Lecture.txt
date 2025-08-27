@@ -1,0 +1,259 @@
+OOPS-1 | Lecture
+*********************************************************************************************************************************************
+
+
+Python Practice:
+================
+https://colab.research.google.com/drive/1AxoYPQDo1ySKSXVYNVn-H26F3c5etayi?usp=sharing
+
+
+***********************************************
+Sorting Algorithms
+
+
+Bubble Sort:
+============
+a = [5 1 2 4 7 3]
+
+Algorithm:
+  - Repeatedly compares adjacent elements
+  - If they are in wrong order swap them
+  - Largest elements bubble up to th end with 
+
+
+def bubble_sort(a):
+  for i in range(len(a)):
+    for j in range(i,len(a)-1):
+      if a[j]>a[j+1]:
+	a[j],a[j+1] = a[j+1],a[j]
+  return a
+
+a = [1,5,2,4,7,3]
+bubble_sort(a) --> [1,2,3,4,5,7]
+
+***********************************************
+
+
+OOPS:
+=====
+Object oriented programming 
+ - It is programming Paradigm
+ - Concept of class and objects
+
+1.class = It is a blueprint that defines the method and properties of an object
+
+Analogy of class
+    - Think of a house blueprint made by an architect
+    - blueprint defines how house will look(wall,door,window)
+    - In python a class
+
+	(attributes  and methods)
+
+2.Object 
+ - Real world instance
+ - a real house built from blueprint in an object
+ - you can build many houses (object) from same blueprint(class)
+ - Each house may have different point colors, furniture or own but they follow the 
+
+
+#OOPS
+class Student:
+  #methods
+  #properties
+  pass
+
+isinstance(Student, object) --> True
+
+myobj = Student()
+type(myobj) --> __main__.Student
+
+isinstance(myobj,Students) --> error (students class doesn't exist)
+
+isinstance(myobj,Student) --> True
+
+isinstance(myobj,object) --> True
+
+
+4 pillar of OOPs
+ - Inheritance
+ - Abstraction
+ - Polymorphism
+ - Encapsulation
+
+
+Inheritance:
+=============
+ - object of one class can inherit the feature of other class
+
+	car (class)
+	 |
+--------------------------------
+|		|		|
+sedan		SUV		Hatchback
+(tyre=4,	(tyre=4,	(tyre=4,
+engine=1000cc,	engine=2000cc,	engine=800cc,
+gc=125mm)	gc=180mm)	gc=130mm)
+
+
+Abstraction:
+===========
+ - Hiding implementation details, showing only essential features
+ - It focuses on what an object does, not how it does it
+ - In python we do implement abstraction using Abstract Base classes(ABC)
+
+Ex: Withdrawing money from ATM, we don't how the transaction is processed and inner details
+
+
+Polymorphism:
+=============
+ - Same entity but different behavior
+
+Print(1+2) = 3 -> Int
+Print("1+2") = 1+2 -> String
+
+
+Encapsulation:
+==============
+
+
+Abstraction	
+-----------	
+Encapsulation
+==============
+----------------------------------------------
+Hiding implementation details showing onl
+
+
+
+
+s1 = Student()
+s1.name = "satya"
+s2=s1
+print(s2.name) --> Satya
+
+
+
+class Student:
+  def __init__(self,name,age):
+    self.name = name
+    self.age = age
+   
+  def study(self):
+    print("lemme watch movie")
+
+s1 = Student("Vaishali",5000)
+
+print(s1.name) --> Vaishali
+print(s1.age) --> 5000
+
+
+
+class Dog:
+  kind = "Canine"
+
+  def __init__(self,name):
+    self.name = name
+
+d1 = Dog("Tuffy")
+d2 = Dog("Scooby")
+d1.name --> Tuffy
+d1.kind --> Canine
+d2.kind --> Canine
+Dog.kind = "Some Random Stuff"
+print(d1.kind+ " ok okokokoko ",d2.kind)-->Something ok okokokoko  Some Random Stuff
+
+d1.kind = "Something"
+print(d1.kind+ " ok okokokoko ",d2.kind)
+
+
+
+
+class Dog:
+     tricks = []
+
+     def __init__(self, name):
+        self.name = name
+
+     def teach_trick(self, trick):
+        self.tricks.append(trick)
+
+
+d1 = Dog("pupy")
+#Dog.__init__(d1,name)
+d2 = Dog("tommy")
+
+
+print(d1.tricks) --> []
+print(d2.tricks) --> []
+
+
+print(d1.name) --> pupy
+print(d2.name) --> tommy
+
+d1.teach_trick("jump")
+d1.tricks --> ['jump']
+d2.tricks --> ['jump']
+
+d2.tricks = "Eat"
+
+print(d1.tricks," ",d2.tricks)
+-->['jump']   Eat
+
+
+
+*****************
+class Dog:
+    dog_count = 10
+
+    def __init__(self, name, breed, age):
+        self.name = name
+        self.breed = breed
+        self.age = age
+        print(f" created: {self.name}, {self.breed}, {self.age} years old")
+
+    def bark(self):
+        print(f"{self.name} says: Woof! 🐶")
+
+    def info(self):
+        print(f"Name: {self.name}, Breed: {self.breed}, Age: {self.age}")
+
+    def count(self,numbr):
+      self.dog_count = numbr
+
+
+d1 = Dog("Bruno","Labrador",3) ->created: Bruno, Labrador, 3 years old
+d2 = Dog("Tomy","Beagie",5) ->  created: Tomy, Beagie, 5 years old
+d3 = Dog("Rocky","German Shepard",2) -> created: Rocky, German Shepard, 2 years old
+
+d3.count(11)
+print(d1.dog_count," # ", d2.dog_count," $ ",d3.dog_count)--> 10  #  10  $  11
+
+
+************************
+Class Variables
+---------------
+Instance Variables
+=============================
+1.Shared by all objects of class
+--------------
+1.Belong to a specific Object
+=====
+2.Define inside class but outside methods
+------------
+2.Define inside __init__ or methods using self
+=====
+3.Stored Once in memory
+------
+3.Each object gets its own copy
+=======
+4.changes affect all objects
+------
+4.change affectss only to specific object
+
+
+
+
+
+
+
+

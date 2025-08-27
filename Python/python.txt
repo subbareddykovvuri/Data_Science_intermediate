@@ -1,0 +1,613 @@
+Python Refresher -1 
+*******************
+
+Rules :-
+======
+1. class is going to start at 9:02 PM sharp
+2. we will break for a 5min after 1hr (10:00 to 10:05)
+3. we will finish class by 11:00 PM, from 11:00 to 11:30 we will have DCS
+4. I am going to repeat most of concepts twice, and some complex concepts even thirce
+5. Assignments + Feedback (1-5)
+
+======================================================
+
+Important Links
+===============
+
+LinkedIn profile : 
+https://www.linkedin.com/in/amit-singh-aba7b6201/
+
+colab Notebook :
+https://colab.research.google.com/drive/1DBCXrgOg93VDwKRl8Gkjw2zIsEMs3WED?usp=sharing
+
+Whatsapp Group :
+https://chat.whatsapp.com/L68EG2Bx4djFdYx9XUPzwS
+
+Drive Path :
+https://drive.google.com/drive/u/2/folders/1Zrg2GKlTU58rCJ_MlT2GwzVjGyL7uw4u
+
+
+======================================================
+
+IDE :-
+======
+Pycharm
+VScode
+Anaconda
+
+
+
+
+
+2. Python is an interpreted language
+
+two types of 
+compiled
+--------
+Translates the entire source code into mlc code
+Faster after compilation
+Ex: c, c++, Java
+All errors are shown after compilation
+
+Interpreted
+-----------
+Translates and executes the code line by line
+slower as line is translated into execution
+Ex: Python, Ruby, Javascript, PHP
+Errors are shown immediately when line is executed
+
+--------------------------------------------------
+
+Hierarchy
+---------
+
+1.High level languages 	-> Python, JS, C#
+	|
+2.Mid level languages 	-> c, c++, Java..
+	|
+3.Assembly languages 	-> code will converted
+	|
+4.Machine Code		-> 1010101001010	
+
+
+------------------------------------------------------
+
+* Everything in python that has a value is an object
+
+Type:
+To check what was the type of the object	
+Ex : type(arg)
+
+Instance:
+It is going to tell whether the type of argument is belongs to the same class or not.
+Ex : 	isinstance(7,int) => True
+	isinstance(int,object) => True
+	isinstance(str,int) => False
+	isinstance(print,object) => True (Even print is an function still function will be a object)
+	
+Note: Everything in python is an object, (int, str, bool are the child of object)
+
+--------------------------------------------------------
+1.4 + 1.2 + 1.6 => 4.199999999999
+
+IEEE 754 double precession standard
+1.4 will store as 1.39999
+1.2 will store as 1.19999
+1.6 will store as 1.59999
+
+---------------------------------------------------------
+
+10/3 => 3.333333333333333335
+
+Floor Divison operator (lowest integer)
+10//3 => 3
+28//6 => 4
+-8/3 => -2.666666
+-8//3 => -3 
+
+2*3 = 6
+2**3 = 2*2*2 = 8 (2 power 3)
+
+8%3 = 2
+-8%3 = 1
+-14%6 = 4
+
+-a%b = b-(a%b)
+
+---------------------------------------------------------
+
+Identifier
+ the name that we give to our variable
+ It should start with aplhabets or underscore(_)
+ It can contain alphanumeric or underscore in the middle of name
+
+_abc = 12 (work well)
+12ab = c (invalid decimal literal)
+_=34 (works well)
+
+=========================================================
+
+Mutable
+-------
+Whose value can be changed
+Ex: lists, sets, dictionaries
+
+Immutable
+---------
+whose values cannot changed
+
+
+a=5
+id(a) => 10757864
+
+a=6
+id(a) => 10757896
+
+As variable a is immutable when we assign a value of 5 to the variable a. a will point to the address of the 5. If we reassign variable a with 6 then it will change pointing to the address of 6 
+
+a=[1,2,3]
+id(a) => 13800561198512
+a.append(4)
+id(a) => 13800561198512
+
+here list are muttable so the pointing will not be changed
+
+a = [1,2,3]
+b = [1,2,3]
+print(id(a), id(b))
+13800561198512 13800561198788
+
+It will be dependent on the pointer and the variable but not the value
+
+a = 6
+b = 6
+print(id(a), id(b))
+10757864  10757864
+
+
+==========================================================
+
+Indented Language
+-----------------
+Python is indented language
+
+Iteration Protocol
+-----------------
+
+a = "amit"
+
+for i in a:
+    print(i)
+
+
+iterable : Data structure with atomic elements which can be iterated (list, set, dict)
+iterator : Variable used to store atomic elements
+iteration block : Entire body of loop
+
+a = "amit" => iterable
+i => iterator
+for loop => iteration block
+
+*********************************************************************************************************************************************************************************
+
+Python Refresher -2
+*******************
+
+Loops -> while, For
+
+a=10:
+while a>0:
+  print(a)
+  a=a-1
+
+10>0 -> 10-1=9>0 -> 9-1=8............1
+10,9,8,........3,2,1
+
+
+Range is function it takes 3 parameters 
+range(a,b,c)
+a=starting range (It will be included)
+b=ending range	 (It will be excluded)
+c=stop functions
+
+print(list(range(1,10))) -> [1,2,3,4,5,6,7,8,9]
+print(list(range(5,11))) -> [5,6,7,8,9,10]
+print(list(range(1,10,3))) -> [1,4,7]
+
+print(list(range(5.5))) -> Error
+Range only with integer values
+
+print(list(range(10,1,-1))) -> [10,9,8,7,6,5,4,3,2]
+print(list(range(20,0,-2))) -> [20,18,16,14....4,2]
+print(list(range(-1,-10,-1))) -> [-1,-2,-3,.....-9]
+print(list(range(1,10,-1))) -> []
+
+for i in range(1,11):
+ if i%2==0:
+    print(i)
+# 2 4 6 8 10
+
+for i in range(1,11,3):
+  print(i)
+# 1,4,7,10
+
+x=0
+while(x<100):
+  x+=2
+print(x)
+100
+
+
+Quiz 2
+For any python object to be iterable, which two functions should be defined on that object?
+
+a.next and range
+b.iter and iterate
+c.next and iter
+d.iter and forward
+
+correct answer : c
+
+
+****************************
+a = [1,2,3,4,5,6,7,8,9,10]
+
+a[3:8:-1] - > [] 
+****************************
+
+
+
+
+
+**********************************************************************************************
+
+Functions
+=========
+
+f(x) = y
+x = input
+y = input
+
+f=function
+
+-> Piece of code that can be used multiple times
+-> It takes input and does something on it.
+
+def abc(a,b):
+   logic
+
+
+Example:
+when ever we login it will show Hi, subbareddy
+how does it knows
+
+**************************************
+def add_first_name():
+   print("Welcome to HDFC bank ",name)
+
+#1
+print(add_first_name("Subbareddy"))
+
+=========
+Welcome to HDFC bank Subbareddy
+
+#2
+print(add_first_name("Kovvuri"))
+
+=========
+Welcome to HDFC bank Kovvuri
+**************************************
+
+**************************************
+def random(a,b):
+    print("a = ",a)
+    print("b = ",b)
+
+#Postional arguments
+====================
+print(random(4,5))
+===========
+a = 4
+b = 5
+
+print(random(5,4))
+===========
+a = 5
+b = 4
+
+# Keyword Arguments
+===================
+
+print(random(a=4,b=5))
+===========
+a = 4
+b = 5
+
+print(random(b=5,a=4))
+===========
+a = 4
+b = 5
+
+****************************************
+
+****************************************
+def access(lst, num):
+  lst.append(num)
+  num -= 4
+  return num
+
+lst = [1,2,3]
+num = 4
+access(lst,num)
+print(lst,num)
+
+--> [1,2,3,4] 4
+
+# num is immutable, num is executed locally only
+****************************************
+
+
+**********************************************************************************************
+
+Data Structures
+================
+ -Strings	- immutable
+ -List		- mutable
+ -Tuples	- immutable
+ -Sets		- mutable
+ -Dictionaries	- mutable
+
+
+List
+=====
+  It it heterogenous collection of object
+
+a=["amit",37,65,True,"python"]
+     0     1  2   3     4
+    -5    -4 -3  -2    -1
+
+print(a[4]) --> python
+print(a[5]) --> Index out of range error
+
+To find how many elements in the list
+
+len(a) --> 5
+
+a[len(a)-2] = a[5-2] = a[3] --> True
+
+a[-2] --> True
+
+
+Slicing
+=========
+a[start_index:end_index]
+# start_index value will be included
+# end_index value will be excluded
+
+a[2:4] --> [65, True]
+
+a[2:] --> [65, True, "python"]
+
+a[:2] --> ["amit",37]
+
+a [x,y,z]
+ x = start
+ y = end
+ z = jump
+
+a[::2] --> ["amit",65,"python"]
+
+a[::-1] --> ["python",True,65,37,"amit"]
+
+a[-3:2:-1] --> []
+
+start = -3
+stop = 2
+
+
+a1 = [1,2,3,4,5,6,7,8,9,10]
+a1[-3:2:-1] --> [8,7,6,5,4]
+
+
+b1 = [11,12,13]
+
+a1+b1 --> [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+a1-b1 --> error
+
+a1*b1 --> error
+
+a1*2 -->[1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]
+
+
+
+a2 = [1,2,3,4,5,6]
+print(id(a2)) -->1234565432343
+
+a[0] = 9
+print(id(a2)) --> 1234565432343
+
+# Address won't be changed
+
+
+**********************************************************************************************
+Tuples
+======================
+Tuples are Immutable 
+
+*****************************
+a = (1,2,3,4,5)
+a[0] = 12 --> It will get error
+*******************************
+
+
+***********************************
+packing and unpacking in tuples
+
+a = (1,2,3)
+x,y,z = a
+print(x,y,z) ->  1 2 3
+***********************************
+
+a = (1,2,3,4,5,6,7,8)
+
+print("max:",max(a)) --> 8
+print("min:",min(a)) --> 1
+print("len:",len(a)) --> 8
+print("max:",max(a)) --> 8
+
+
+**********************************************************************************************
+
+Dictionaries
+=================
+ - how key value pairs
+ - unordered
+ - mutable
+ - indexable using keys
+ - Dictionaries are iterable
+ - Any immutable DS can be key
+ - Any immutable or muttable DS can be value
+
+
+d = {k:v}
+
+d1 = {
+  "name" : "Bipin",
+  "age" : "5000,
+  "subject" : ["python","JS"]
+}
+
+d1.get("age") --> 5000
+d1.get("subject") --> ["python","JS"]
+d1["subject"] --> ["python","JS"]
+
+
+d1["subject"] = "Maths"
+
+print(d1)
+-->
+{
+  "name" : "Bipin",
+  "age" : "5000,
+  "subject" : "Maths"
+}
+
+d1.pop("age")
+print(d1)
+-->
+{
+  "name" : "Bipin",
+  "subject" : "Maths"
+}
+
+
+d1.update({'subject' : ['python','JS']})
+print(d1)
+-->
+{
+  "name" : "Bipin",
+  "subject" : ['python','JS']
+}
+
+d1["language"] = "English"
+
+{
+  "name" : "Bipin",
+  "subject" : ['python','JS'],
+  "language" : "English"
+}
+
+d1["subject"].append("Maths")
+{
+  "name" : "Bipin",
+  "subject" : ['python','JS',"Maths"],
+  "language" : "English"
+}
+
+
+d1.get("Address") --> empty output
+
+value = d1.get("Address") 
+print(value) --> None
+
+
+**********************************************************************************************
+Sets
+========
+- unordered
+- non indexable
+- mutable
+- stores onlt unique values
+- iterable
+- can only contain immutable DS
+- {}
+
+s1 = {1,2,3,3,3,3,4,4,4,5,5,6)
+print(s1)
+{1,2,3,4,5,6)
+
+s1 = set()
+s1.add(10)
+print(s1) -> {10}
+s1.remove(10)
+print(s1) -> set()
+
+s1.update([1,2,3,4,5,6])
+print(s1) --> {1,2,3,4,5,6}
+
+
+A = 1,2
+B = 1,3,4,5
+
+A.intersection(B) = 1
+A.union(B) = {1,2,3,4,5}
+A.Difference(B) = {2}
+B.Difference(A) = {3,4,5}
+A.symmetric_difference(B) = {2,3,4,5}
+
+**********************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
