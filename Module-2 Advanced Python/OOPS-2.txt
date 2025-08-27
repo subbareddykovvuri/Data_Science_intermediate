@@ -1,0 +1,37 @@
+***********************************************
+OOPS -2 | Lecture
+=======
+
+ - Using Dunder/Magic methods
+ - Inheritence
+ - Private Properties
+ - Multiple Inheritence
+   -> Method Resolution Order
+
+OOPS 2 - Dunders,Inheritence.ipynb:
+----------------------------------
+https://colab.research.google.com/drive/1JNVq3LUcH__TviPT42-G0-73W7d96tCM?usp=sharing
+***********************************************
+
+
+Using Dunder/Magic methods
+=========================
+
+ - Double Underscore
+ - These are called magic methods
+
+ 
+https://www.geeksforgeeks.org/python/dunder-magic-methods-python/
+
+
+class Car:
+  def __init__(self, name, mileage):
+    self.name = name
+    self.mileage = mileage
+
+c1 = Car("Nexon",15)
+c2 = Car("Scorpio,13)
+
+print(c1) --> 
+
+

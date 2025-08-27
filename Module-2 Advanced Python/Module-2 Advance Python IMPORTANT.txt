@@ -1,0 +1,26 @@
+Module-2
+Advanced Python  (4 weeks)
+===============
+
+Day 2, 18 Aug 2025 Python Refresher-1
+
+Day 3, 20 Aug 2025 Python Refresher-2
+
+Day 4, 22 Aug 2025 Basics of Time and Space Complexity
+
+Day 5, 25 Aug 2025 OOPS-1
+
+Day 6, 27 Aug 2025 OOPS-2
+
+Day 7, 29 Aug 2025 Functional Programming - 1
+
+Day 8, 1 Sep 2025 Functional Programming - 2
+
+Day 9, 3 Aug 2025 Exception Handling and Modules
+
+Day 10, 5 Sep 2025 File Handling
+
+Day 11, 8 Sep 2025 DSML Module Test: Advanced Python (No Class Today)
+
+Day 12, 10 Sep 2025 Advanced Python - Break
+
