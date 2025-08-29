@@ -494,3 +494,112 @@ b = B()
 b.do_something()
 # What would be the output of the following?
 # Ans : I do something! I also do something!
+
+
+
+class Parent:
+  def __init__(self):
+    pass
+  def print(self):
+    print("60")
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+    def type(self):
+        super().print()
+
+C=Child()
+C.type()
+
+
+
+# Quiz 1
+
+class A:
+    def __init__(self):
+        print("IN A before calling multiply")
+        self.multiply(15)
+        print("IN A after calling multiply")
+        print(self.i)
+        print("IN A after print self.i")
+
+    def multiply(self, i):
+        print("IN A before  multiply")
+        self.i = 4 * i
+        print("IN A after multiply")
+
+class B(A):
+    def __init__(self):
+        print("IN B before init")
+        super().__init__()
+        print("IN B after init")
+
+    def multiply(self, i):
+        print("IN B before  multiply")
+        self.i = 2 * i;
+        print("IN B after multiply")
+
+obj = B()
+print(B.__mro__)
+
+
+
+
+#
+class Employee:
+
+    def __init__(self, name, val):
+
+        self._name=name
+
+        self._salary=val
+
+e1=Employee("Rahul",200)
+
+print(e1._salary)
+
+
+
+#
+class Demo:
+    def __new__(self):
+        self.__init__(self)
+        print("Demo's __new__() invoked")
+
+    def __init__(self):
+        print("Demo's __init__() invoked")
+
+class Derived_Demo(Demo):
+    def __new__(self):
+        print("Derived_Demo's __new__() invoked")
+    
+    def __init__(self):
+        print("Derived_Demo's __init__() invoked")
+
+def main():
+    obj1 = Derived_Demo()
+    obj2 = Demo()
+
+main()
+
+
+
+#
+class A:
+ def __init__(self, name, sound="Grrrr"):
+   self.name = name
+   self.sound = sound
+
+ def make_noise(self):
+   print("{} says, {}".format(self.name,self.sound))
+
+class B(A):
+ def __init__(self, name="Rachel"):
+   super().__init__(name, "Meow!")
+
+ def make_noise(self,sound="Grrrr!"):
+   print("{} says, {}".format(self.name, sound))
+
+pet_cat = B()
+pet_cat.make_noise()
