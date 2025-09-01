@@ -410,3 +410,21 @@ view_profile(user2)
 
 Ans : C
 '''
+
+
+
+odd=lambda x: bool(x%2)
+result=[n for n in range(10)]
+
+for i in result:
+    if odd(i):
+        continue       
+    else:
+        print(i, end=" ")
+
+
+#Which option represents the statement that is responsible for generating [2, [2, 3, 2, 3], 8, 10] as the output in the following code?
+print()
+a=[1,[2,3],4,5]
+result = lambda x: list(map(lambda y:2*y, x)) if isinstance(x,list) else lambda x:3*x   
+print(result(a))
