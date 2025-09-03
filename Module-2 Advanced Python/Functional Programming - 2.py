@@ -397,3 +397,187 @@ What will be the output for the function call sample_func(1, 2, 3, 4, a=5, b=6)?
 
 
 
+
+# Q1
+# What will be the output of the following code snippet:
+
+import functools
+lists = [1,2,3,4]
+print(functools.reduce(lambda x,y : x if x > y else y ,lists))
+'''
+Error
+
+10
+
+4
+
+No Output
+'''
+# 4
+
+
+
+
+
+
+# Q2
+sentence = "abc cde def"
+result = list(map(lambda x: list(x), sentence.split(" ")))
+print(result)
+
+
+'''
+['abc'] ['cde'] ['def']
+
+['a', 'b', 'c'] ['c', 'd', 'e'] ['d', 'e', 'f']
+
+['abc', 'cde', 'def']
+
+[['a', 'b', 'c'], ['c', 'd', 'e'], ['d', 'e', 'f']]
+'''
+
+
+
+
+# Q3
+string = '''
+We spent several years building our own database engine, Amazon Aurora, a fully-managed MySQL and PostgreSQL-compatible service with the same or better durability and availability as
+the commercial engines, but at one-tenth of the cost. We were not surprised when this worked.
+'''
+result = lambda key, val: key[ key.find(val) -18 : key.find(val) +18 ] if val in key else -1
+
+print(result(string, 'SQL'))
+
+'''
+We were not surprised when this worked
+
+compatible service with the same or better durability
+
+a fully-managed MySQL and PostgreSQL
+
+None of the above
+'''
+# a fully-managed MySQL and 
+
+
+
+
+
+# Q4
+
+array = [ [1, [ [ 2 ] ], [ [ [ 3 ] ] ], [ [ 4 ], 5 ] ]]
+result = lambda x: sum(map(result, x), [ ] ) if isinstance(x, list) else [x]
+print(result(array))
+
+'''
+[1, [ 2 ], [ [ 3 ] ], [ 4 ], 5 ]
+
+1 , 2, 3, 4, 5
+
+15
+
+[1, 2, 3, 4, 5]
+'''
+
+# [1, 2, 3, 4, 5]
+
+
+# Which given option is equivalent to the following code:
+
+array  = [1, 2, 3, 4, 5]
+def func1(x):
+    return x<0
+result=filter(func1, array)
+print(list(result))
+
+
+'''
+list(filter(lambda x:x<0, array))
+
+list(filter(lambda x, y: x<0,array))
+
+list(filter(reduce x<0, array))
+
+list(reduce(x: x<0, array))
+'''
+
+# list(filter(lambda x:x<0, array))
+
+
+
+
+# Q6
+#You are given an incomplete code in which you have to print all the numbers from the list that are less than 6 using filter function. Complete the given code.
+
+l=[1, 10, -3, 4, 15]
+
+def f1(x):
+ return x<6
+
+m1 = None
+# PUT YOUR CODE HERE
+
+# print(list(m1))
+
+'''
+m1 = filter(f1, l)
+
+m1 = filter(l, f1)
+
+m1 = filter(f1, l, 6)
+
+m1 = filter(f1, 6, l)
+'''
+# m1 = filter(f1, l)
+
+
+
+# Additional
+
+# Q1
+# What will be the output of the following code snippet:
+
+from functools import reduce
+array = {1, 2, 3}
+result = lambda array: reduce(lambda P, x: P + [subset | {x} for subset in P], array , [set()]) 
+
+print(result(array)) 
+
+'''
+[set(), {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}]
+
+[{1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}]
+
+[{1, 2, 3}]
+
+None of these
+'''
+# [set(), {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}]
+
+
+
+# Q2
+# Given a list containing email ids, help Sam in retrieving all the emails which have "SAM" or "sam" in their names.
+
+ids = ["SAM@gmail.com", "Ram@gmail.com", "sam@gmail.com", "samJohnson@iit.com", "SAM@harvard.com"]
+name = "sam"
+# result = list(filter(lambda x : ??? , ids))
+# print(result)
+
+# Complete the code snippet given above to return all the email ids in the list that have either the uppercase or lowercase name as a substring. Choose the correct option which can be used to fill the blank (???) to get the required output.
+
+
+'''
+name in x.lower()
+
+(name.lower() or name.upper()) in x
+
+name.lower() in x and name.upper() in x
+
+(name.lower() and name.upper()) in x
+'''
+
+# name in x.lower()
+
+
+
