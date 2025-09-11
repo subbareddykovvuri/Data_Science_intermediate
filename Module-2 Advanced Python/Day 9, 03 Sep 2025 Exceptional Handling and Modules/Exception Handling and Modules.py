@@ -404,3 +404,44 @@ The exception for element 0 is not ZeroDivisionError.
 D
 The code does not contain a ZeroDivisionError.
 '''
+
+
+
+
+
+#Q3
+'''
+Which of the given options is equivalent to “random.randint(3, 6)”?
+
+random.choice([3, 6])
+
+random.randrange(3, 6)
+
+3 + random.randrange(3)
+
+3 + random.randrange(4)
+
+Ans : 3 + random.randrange(4)
+'''
+
+try:
+  print(xadsfs)
+except NameError:                       #1
+  print("Variable x is not defined")
+except:                                 #2
+  print("Something else went wrong")
+
+
+def even(x):
+  try:
+    if x%2==0:
+      return "even"
+    else:
+      raise Exception
+  except:
+    return("odd")
+  finally:
+    return "integer"
+
+print(even(5))    #A
+print(even(4)) 
