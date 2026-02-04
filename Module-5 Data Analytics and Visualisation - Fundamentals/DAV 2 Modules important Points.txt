@@ -1,0 +1,20 @@
+numpy
+vectorization and broadcasting
+
+np.bincount, np.eye, np.reshape
+
+pandas
+Handling nulls, merge, concat, drop, rename, group by, aggregations
+pd.cut, pd.qcut
+
+
+DAV-2
+Baye's Theorem and conditional Probability (Mathematical Question)
+CLT, Properties of Normal Distribution, Poission, Binomial vs Bernouli
+
+DAV-3
+Hypothesis Testing, Power of test, Type 1 and Type 2 
+Assumptions of Test, Mann Whiteney,
+Outliers, Encoding, Feature Scaling,Test
+Annovam Ttest, ZTest, Chisq, Kruskal,
+Diff between Correlation and Covariance (Pearson and Spearmann)
