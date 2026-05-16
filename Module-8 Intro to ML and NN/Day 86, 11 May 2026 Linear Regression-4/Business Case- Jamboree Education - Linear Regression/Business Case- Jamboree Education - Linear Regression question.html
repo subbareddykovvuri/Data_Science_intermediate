@@ -1,0 +1,237 @@
+<html>
+
+<head></head>
+
+<body>
+
+
+    <div class="layout">
+        <div class="cr-problem-tab layout__content">
+            <div class="cr-diagram-editor-timeline p-10">
+                <li class="tappable cr-diagram-editor-timeline-item cr-diagram-editor-timeline-item--active bold">Submit
+                    Solution</li>
+                <li class="tappable cr-diagram-editor-timeline-item">Evaluation</li>
+                <div data-testid="backdrop" class="sr-backdrop"></div>
+                <div class="sr-modal dialog cr-crowd-judge-dialog">
+                    <div class="sr-modal__body">
+                        <div class="dialog__body"></div>
+                        <div class="dialog__actions"><a class="tappable btn btn-outlined dialog__action"></a><a
+                                class="tappable btn dialog__action"></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cr-p-heading space-between">
+                <div class="cr-p-heading__text"><span>Q1. Jamboree Education - Linear Regression</span><i
+                        class="cr-icon-project m-l-10"></i><span
+                        class="status-tag-2 status-tag-2--attention flex-jc m-l-10 status-tag-2--small"><i
+                            class="cr-icon-pending status-tag-2__icon status-tag-2__icon--left"></i>Unsolved</span>
+                </div><a class="tappable btn btn-inverted cr-p-heading__action"><i
+                        class="icon-bookmark-outline cr-bookmark-icon"></i></a>
+            </div>
+            <div class="cr-p-tags p-h-10 p-v-5"></div>
+            <div>
+                <div class="cr-project-cd-container cr-project-cd-container--problem">
+                    <div class="cr-project-cd-wrapper"><span class="cr-project-cd-wrapper__deadline-text">Deadline for
+                            the Business Case :</span>
+                        <div class="cr-project-cd-container__count-down">
+                            <div><span>10</span><span>d</span></div>
+                            <div><span>03</span><span>h</span></div>
+                            <div><span>35</span><span>m</span></div>
+                            <div><span>14</span><span>s</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="cr-feature-banner">
+                        <div class="cr-feature-banner__icon-wrap"><img
+                                src="https://assets-v2.scaler.com/packs/images/bulb.b38ad6.svg" alt="feature icon">
+                        </div>
+                        <div class="cr-feature-banner__body">
+                            <div class="cr-feature-banner__body-text">Using hints except Complete Solution is Penalty
+                                free now</div>
+                            <div class="cr-feature-banner__btn-wrap"><a class="tappable cr-feature-banner__btn"
+                                    href="/academy/mentee-dashboard/class/511457/project/problems/17972/hints?navref=cl_pb_nv_tb">Use
+                                    Hint</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="html-content">
+                        <div class="html-content__container cr-p-statement">
+                            <p><strong>Mindset</strong></p>
+                            <ol>
+                                <li>Evaluation will be kept lenient, so make sure you attempt this case study. </li>
+                                <li>Read the question carefully and try to understand what exactly is being asked.</li>
+                                <li>Brainstorm a little. If you’re getting an error, remember that Google is your best
+                                    friend.</li>
+                                <li>You can watch the lecture recordings or go through your lecture notes once again if
+                                    you feel like you’re getting confused over some specific topics.</li>
+                                <li>Discuss your problems with your peers. Make use of the Slack channel and WhatsApp
+                                    group.</li>
+                                <li>Only if you think that there’s a major issue, you can reach out to your Instructor
+                                    via Slack or Email.</li>
+                                <li>There is no right or wrong answer. We have to get used to dealing with uncertainty
+                                    in business. This is exactly the skill we want to develop.</li>
+                            </ol>
+                            <p><strong>Context</strong></p>
+                            <p>Jamboree has helped thousands of students like you make it to top colleges abroad. Be it
+                                GMAT, GRE or SAT, their unique problem-solving methods ensure maximum scores with
+                                minimum effort.<br>They recently launched a feature where students/learners can come to
+                                their website and check their probability of getting into the IVY league college. This
+                                feature estimates the chances of graduate admission from an Indian perspective. </p>
+                            <p><br><strong>How can you help here?</strong></p>
+                            <p>Your analysis will help Jamboree in understanding what factors are important in graduate
+                                admissions and how these factors are interrelated among themselves. It will also help
+                                predict one's chances of admission given the rest of the variables.</p>
+                            <p> </p>
+                            <p><strong>Dataset:</strong></p>
+                            <p>Dataset Link: <a
+                                    href="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/001/839/original/Jamboree_Admission.csv"
+                                    target="_blank" rel="noopener">jamboree_admission.csv</a></p>
+                            <p> </p>
+                            <p><strong>Column Profiling:</strong></p>
+                            <ul>
+                                <li>Serial No. (Unique row ID)</li>
+                                <li>GRE Scores (out of 340)</li>
+                                <li>TOEFL Scores (out of 120)</li>
+                                <li>University Rating (out of 5)</li>
+                                <li>Statement of Purpose and Letter of Recommendation Strength (out of 5)</li>
+                                <li>Undergraduate GPA (out of 10)</li>
+                                <li>Research Experience (either 0 or 1)</li>
+                                <li>Chance of Admit (ranging from 0 to 1)</li>
+                            </ul>
+                            <p> </p>
+                            <p><strong>Concept Used:</strong></p>
+                            <ul>
+                                <li>Exploratory Data Analysis</li>
+                                <li>Linear Regression</li>
+                            </ul>
+                            <p> </p>
+                            <p><strong>What does good looks like?</strong></p>
+                            <ul>
+                                <li>Import the dataset and do usual exploratory data analysis steps like checking the
+                                    structure &amp; characteristics of the dataset.</li>
+                                <li>Drop the unique row Identifier if you see any. This step is important as you don’t
+                                    want your model to build some understanding based on row numbers. </li>
+                                <li>Use Non-graphical and graphical analysis for getting inferences about variables.
+                                    <ul>
+                                        <li>This can be done by checking the distribution of variables of graduate
+                                            applicants.</li>
+                                    </ul>
+                                </li>
+                                <li>Once you’ve ensured that students with varied merit apply for the university, you
+                                    can start understanding the relationship between different factors responsible for
+                                    graduate admissions.</li>
+                                <li>Check correlation among independent variables and how they interact with each other.
+                                </li>
+                                <li>Use Linear Regression from (Statsmodel library) and explain the results.</li>
+                                <li>Test the assumptions of linear regression:
+                                    <ul>
+                                        <li>Multicollinearity check by VIF score </li>
+                                        <li>Mean of residuals</li>
+                                        <li>Linearity of variables (no pattern in residual plot)</li>
+                                        <li>Test for Homoscedasticity </li>
+                                        <li>Normality of residuals</li>
+                                    </ul>
+                                </li>
+                                <li>Do model evaluation- MAE, RMSE, R2 score, Adjusted R2.</li>
+                                <li>Provide actionable Insights &amp; Recommendations</li>
+                                <li>Try out different Linear Regressions</li>
+                            </ul>
+                            <p><strong>Evaluation Criteria (100 Points):</strong></p>
+                            <ol>
+                                <li>Define Problem Statement and perform Exploratory Data Analysis <strong>(10
+                                        points)</strong>
+                                    <ul>
+                                        <li>Definition of problem (as per given problem statement with additional views)
+                                        </li>
+                                        <li>Observations on shape of data, data types of all the attributes, conversion
+                                            of categorical attributes to 'category' (If required) , missing value
+                                            detection, statistical summary.</li>
+                                        <li>Univariate Analysis (distribution plots of all the continuous variable(s)
+                                            barplots/countplots of all the categorical variables)</li>
+                                        <li>Bivariate Analysis (Relationships between important variables such as
+                                            workday and count, season and count, weather and count. </li>
+                                        <li>Illustrate the insights based on EDA
+                                            <ul>
+                                                <li>Comments on range of attributes, outliers of various attributes
+                                                </li>
+                                                <li>Comments on the distribution of the variables and relationship
+                                                    between them</li>
+                                                <li>Comments for each univariate and bivariate plots</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Data Preprocessing <strong>(10 Points)</strong>
+                                    <ul>
+                                        <li>Duplicate value check</li>
+                                        <li>Missing value treatment</li>
+                                        <li>Outlier treatment</li>
+                                        <li>Feature engineering</li>
+                                        <li>Data preparation for modeling</li>
+                                    </ul>
+                                </li>
+                                <li>Model building <strong>(10 Points)</strong>
+                                    <ul>
+                                        <li>Build the Linear Regression model and comment on the model statistics</li>
+                                        <li>Display model coefficients with column names</li>
+                                        <li>Try out Ridge and Lasso regression</li>
+                                    </ul>
+                                </li>
+                                <li>Testing the assumptions of the linear regression model <strong>(50 Points)</strong>
+                                    <ol>
+                                        <li>Multicollinearity check by VIF score (variables are dropped one-by-one till
+                                            none has VIF&gt;5) (10 Points)</li>
+                                        <li>The mean of residuals is nearly zero (10 Points)</li>
+                                        <li>Linearity of variables (no pattern in the residual plot) (10 Points)</li>
+                                        <li>Test for Homoscedasticity (10 Points)</li>
+                                        <li>Normality of residuals (almost bell-shaped curve in residuals distribution,
+                                            points in QQ plot are almost all on the line) (10 Points)</li>
+                                    </ol>
+                                </li>
+                                <li>Model performance evaluation <strong>(10 Points)</strong>
+                                    <ul>
+                                        <li>Metrics checked - MAE, RMSE, R2, Adj R2</li>
+                                        <li>Train and test performances are checked</li>
+                                        <li>Comments on the performance measures and if there is any need to improve the
+                                            model or not</li>
+                                    </ul>
+                                </li>
+                                <li>Actionable Insights &amp; Recommendations <strong>(10 Points)</strong>
+                                    <ul>
+                                        <li>Comments on significance of predictor variables</li>
+                                        <li>Comments on additional data sources for model improvement, model
+                                            implementation in real world, potential business benefits from improving the
+                                            model (These are key to differentiating a good and an excellent solution)
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p> </p>
+                            <p><strong>Submission Process:</strong></p>
+                            <ul>
+                                <li>Type your insights and recommendations in the text editor.</li>
+                                <li>Convert your jupyter notebook into PDF (Save as PDF using Chrome browser’s Print
+                                    command), upload it on our platform</li>
+                                <li>Optionally, you may add images/graphs in the text editor by taking screenshots or
+                                    saving matplotlib graphs using plt.savefig(...).</li>
+                                <li>After submitting, you will not be allowed to edit your submission.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div data-testid="backdrop" class="sr-backdrop"></div>
+                <div class="sr-modal sr-modal--large active-job skills-modal"><a
+                        class="tappable sr-modal__close-alt no-highlight" aria-label="close"><i
+                            class="icon-close"></i></a>
+                    <div class="sr-modal__body">
+                        <div class="cr-p-statement-modal-image"><img></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
